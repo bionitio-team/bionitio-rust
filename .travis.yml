@@ -7,5 +7,5 @@ before_install:
   - ./.travis/install-dependencies.sh 
 
 script:
-  - ./.travis/test.sh ~/.cargo/bin/bionitio-rs
+  - ./functional_tests/test.sh ~/.cargo/bin/bionitio-rs
   - ./.travis/unit-test.sh
