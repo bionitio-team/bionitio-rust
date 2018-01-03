@@ -381,14 +381,6 @@ mod tests {
         test_fastastats_ok(0,
                            &String::from(">"),
                            None)
-
-                           ///Some(FastaStats {
-                           ///    min_len: 0,
-                           ///    average_len: 0,
-                           ///    max_len: 0,
-                           ///    total: 0,
-                           ///    num_seqs: 1,
-                           ///}))
     }
 
     /// Input FASTA file consisting of a single sequence.
