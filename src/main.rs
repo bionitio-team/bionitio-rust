@@ -42,7 +42,7 @@ use argparse::{ArgumentParser, StoreTrue, Store, Print, Collect, StoreOption};
 use log4rs::append::file::FileAppender;
 use log4rs::encode::pattern::PatternEncoder;
 use log4rs::config::{Appender, Config, Root, Logger};
-use log::LogLevelFilter;
+use log::LevelFilter;
 
 // File I/O error. This can occur if at least one of the input FASTA
 // files cannot be opened for reading. This can occur because the file
@@ -269,8 +269,8 @@ fn init_logging(options: &CmdOptions) -> () {
                 .logger(Logger::builder()
                     .appender("log_messages")
                     .additive(false)
-                    .build("app::log_messages", LogLevelFilter::Info))
-                .build(Root::builder().appender("log_messages").build(LogLevelFilter::Info))
+                    .build("app::log_messages", LevelFilter::Info))
+                .build(Root::builder().appender("log_messages").build(LevelFilter::Info))
                 .unwrap();
 
             log4rs::init_config(config).unwrap(); 
@@ -380,13 +380,7 @@ mod tests {
     fn single_greater_than_input() {
         test_fastastats_ok(0,
                            &String::from(">"),
-                           Some(FastaStats {
-                               min_len: 0,
-                               average_len: 0,
-                               max_len: 0,
-                               total: 0,
-                               num_seqs: 1,
-                           }))
+                           None)
     }
 
     /// Input FASTA file consisting of a single sequence.
