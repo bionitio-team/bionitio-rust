@@ -10,6 +10,16 @@ This program is released as open source software under the terms of [MIT License
 
 # Installing
 
+Clone this repository: 
+```
+git clone https://github.com/bionitio-team/bionitio-rust
+```
+
+Move into the repository directory:
+```
+cd bionitio-rust
+```
+
 We recommend using the `cargo` tool to install bionitio. You will need to install `cargo` on your system first.
 ```
 % curl -sSf https://static.rust-lang.org/rustup.sh | sh
