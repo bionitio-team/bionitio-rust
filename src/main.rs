@@ -1,8 +1,8 @@
 /// Module      : Main
 /// Description : The main entry point for the program.
-/// Copyright   : (c) Bernie Pope, 2016
-/// License     : MIT
-/// Maintainer  : bjpope@unimelb.edu.au
+/// Copyright   : (c) BIONITIO_AUTHOR, BIONITIO_DATE  
+/// License     : BIONITIO_LICENSE 
+/// Maintainer  : BIONITIO_EMAIL 
 /// Stability   : experimental
 /// Portability : POSIX
 ///
