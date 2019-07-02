@@ -1,5 +1,5 @@
 [package]
-name = "bionitio-rs"
+name = "bionitio"
 version = "0.1.0"
 authors = ["Bernie Pope <bjpope@unimelb.edu.au>"]
 

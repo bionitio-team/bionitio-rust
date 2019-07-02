@@ -4,4 +4,4 @@ COPY . .
 
 RUN cargo install --path .
 
-ENTRYPOINT ["bionitio-rs"]
+ENTRYPOINT ["bionitio"]
