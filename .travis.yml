@@ -10,5 +10,5 @@ before_install:
 script:
   # - ./functional_tests/bionitio-test.sh -p ~/.cargo/bin/bionitio-rs -d functional_tests/test_data
   # - ./.travis/unit-test.sh
-  - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-rust
+  # - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-rust
   - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-rust -p bionitio-rs -d /bionitio/functional_tests/test_data -v  
