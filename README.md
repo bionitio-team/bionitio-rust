@@ -37,8 +37,6 @@ You can test that the program works by running it on some test data:
 % cargo run < ../test_data/two_sequence.fasta
 ```
 
-XXX Explain how to do local and global install.
-
 
 # General behaviour
 
