@@ -1,4 +1,4 @@
-FROM rust:1.10
+FROM rust:1.20
 WORKDIR /bionitio
 COPY . .
 
