@@ -1,11 +1,14 @@
 sudo: true
-dist: trusty
-
-language: rust
+dist: xenial
+services:
+  - docker
 
 before_install:
-  - ./.travis/install-dependencies.sh 
+  #- ./.travis/install-dependencies.sh 
+  - docker build -t bionitio-rust .
 
 script:
-  - ./functional_tests/bionitio-test.sh -p ~/.cargo/bin/bionitio-rs -d functional_tests/test_data
-  - ./.travis/unit-test.sh
+  # - ./functional_tests/bionitio-test.sh -p ~/.cargo/bin/bionitio-rs -d functional_tests/test_data
+  # - ./.travis/unit-test.sh
+  - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-rust
+  - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-rust -p bionitio -d /bionitio/functional_tests/test_data -v  
