@@ -2,10 +2,15 @@ sudo: true
 dist: xenial
 services:
   - docker
+language: python
+python:
+  - "3.4"
 
 before_install:
+  - pip3 install cwltool
   - docker build -t bionitio-rust .
 
 script:
   - docker run --entrypoint /bionitio/.travis/unit-test.sh bionitio-rust
   - docker run --entrypoint /bionitio/functional_tests/bionitio-test.sh bionitio-rust -p bionitio -d /bionitio/functional_tests/test_data -v  
+  - cwltool bionitio.cwl --fasta_file functional_tests/test_data/two_sequence.fasta
