@@ -37,6 +37,8 @@ You can test that the program works by running it on some test data:
 % cargo run < ../test_data/two_sequence.fasta
 ```
 
+XXX Explain how to do local and global install.
+
 
 # General behaviour
 
@@ -168,11 +170,27 @@ You can run the unit tests for bionitio with the following command:
 
 ## Test suite
 
-A set of sample test input files is provided in the `test_data` folder.
+Sample test input files are provided in the `functional_tests/test_data` folder.
 ```
+$ cd functional_tests/test_data
 $ bionitio two_sequence.fasta
 FILENAME        TOTAL   NUMSEQ  MIN     AVG     MAX
 two_sequence.fasta      2       357     120     178     237
+```
+
+Automated tests can be run using the `functional_tests/bionitio-test.sh` script like so:
+
+```
+cd functional_tests
+./bionitio-test.sh -p bionitio -d test_data
+```
+
+The `-p` argument specifies the name of the program to test, the `-d` argument specifies the path of the directory containing test data.
+The script will print the number of passed and failed test cases. More detailed information about each test case can be obtained
+by requesting "verbose" output with the `-d` flag:
+
+```
+./bionitio-test.sh -p bionitio -d test_data -v
 ```
 
 # Bug reporting and feature requests
