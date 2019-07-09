@@ -28,7 +28,7 @@ $ cd bionitio-rust
 
 We recommend using the `cargo` tool to install bionitio. You will need to install `cargo` on your system first.
 ```
-% curl -sSf https://static.rust-lang.org/rustup.sh | sh
+% curl https://sh.rustup.rs -sSf | sh
 ```
 
 Once you have `cargo` installed you can use it to build bionitio like so:
