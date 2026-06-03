@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["Bernie Pope <bjpope@unimelb.edu.au>"]
 
 [dependencies]
-bio = "*"
+bio = "0.33"
 argparse = "*"
 log = "*"
-log4rs = "*"
+log4rs = "0.13"
